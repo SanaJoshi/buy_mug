@@ -14,9 +14,12 @@
   </thead>
 
   <tbody>
+
     <% @products.each do |product| %>
       <tr>
+        <%= link_to product_path(product) do %>
         <td><img src=<%=product.image_url %>> </td>
+        <% end %>
         <td><%= product.name %></td>
         <td><%= product.price %></td>
         <td><%= product.description %></td>

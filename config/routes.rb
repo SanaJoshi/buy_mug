@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+
   resources :orders
   resources :products
   devise_for :users
+  resources :charges
   root 'products#index'
 
 
