@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
    @order.product_id = @product.id
    @order.user_id = current_user.id
    @product = Product.includes(:user).find(params[:id])
-  end
+    end
 
  # GET /products/new
  def new
